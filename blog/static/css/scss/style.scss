@@ -1,0 +1,252 @@
+@import 'variable';
+
+body {
+    background-color: $black;
+
+    header {
+        .navbar {
+            color: $darkColor;
+            .user_top_menu{
+                a{
+                    color: $darkColor;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .container {
+        margin: 2% auto;
+
+        .comments {
+            background-color: grey;
+
+            .comment_unique {
+                padding: 2%;
+                border: 1px solid lightgrey;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: $darkColor;
+        }
+
+        .listArt {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            background: rgb(207, 207, 207);
+
+            .sectArt {
+                background-color: darkgrey;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                // margin: 2% auto;
+                h3 {
+                    grid-column: 1/3;
+                    text-align: center;
+                    color: $primaryColor;
+                }
+
+                h4 {
+                    color: $darkColor;
+                    font-size: 1.3rem;
+                    grid-column: 2/3;
+                    text-align: center;
+
+                    a {
+                        color: $darkColor;
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+                    // margin-bottom: 500px;
+                }
+
+                img {
+                    max-width: 100%;
+                    grid-row: 2/4;
+                }
+
+                .readArticle {
+                    text-align: right;
+                    color: $darkColor;
+                }
+
+                .readArticle:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .article_detail{
+            img{
+                max-width: 100%;
+            }
+            h1{
+                text-align: center;
+                color: $primaryColor;
+                text-decoration-line: underline;
+                text-decoration-style:  dotted;
+            }
+            p{
+                color: white;
+            }
+        }
+        .category{
+            section{
+                background-color: $secondColor;
+
+            // border: 1px solid $primaryColor;
+            margin-top: 3rem;
+            img{
+                max-width: 90%;
+                text-align: center;
+                display: block;
+                margin: auto;
+            }
+            h1{
+                color:$primaryColor;
+                text-align: center;
+            }
+            p{
+                color: white;
+            }
+            .readArticle{
+                display: block;
+                text-align: center;
+                font-size: 1.3rem;
+                color:$primaryColor;
+
+            }
+        }
+
+        }
+        .addComment{
+            text-align: center;
+            color: $darkColor;
+            margin-bottom: 2rem;
+            button{
+                color: white;
+                background: $darkColor;
+                padding: 1%;
+                border-radius: 5px;
+            }
+        }
+        .pagination_nav {
+            .pagination {
+                .page-item {
+                    margin-top: 2%;
+                    .page-link {
+                        color: $primaryColor;
+                        background-color: $secondColor;
+                        border-color: $primaryColor;
+
+                    }
+                }
+
+                .active {
+                    .page-link {
+                        background-color: $primaryColor;
+                        color: $black;
+                        border: solid 1px $darkColor;
+                    }
+                }
+            }
+        }
+
+        .login_form {
+            background: $secondColor;
+            border-radius: 0.4em;
+            border: 1px solid #0A192A;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+            text-align: center;
+            color: $primaryColor;
+            a{
+                color: $darkColor;
+            }
+        }
+
+        .login_form:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            left: 20%;
+            top: 0;
+        }
+
+        .login_form:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 8px;
+            height: 5px;
+            border-radius: 50%;
+            left: 34%;
+            top: -7px;
+            box-shadow: 0 0 6px 4px #fff;
+        }
+
+        .asideInfo {
+            background: $secondColor;
+            position: fixed;
+            padding: 2%;
+            border: 1px solid $primaryColor;
+
+            .search-bar {
+                text-align: center;
+                margin: 2%;
+                color: $primaryColor;
+                width: 100%;
+                input {
+                    color: $primaryColor;
+
+                }
+                button{
+
+                }
+            }
+
+            .listCat {
+                list-style: none;
+                color: $primaryColor;
+
+                a {
+                    color: $primaryColor;
+                }
+            }
+
+            .datePicker {
+                justify-content: center;
+                display: flex;
+                color: $primaryColor;
+                margin-bottom: 10%;
+
+                .datepicker {
+                    border: 1px solid $primaryColor;
+                    border-radius: 5px;
+                    background-color: #343a40;
+                    box-shadow: 0 0 83px -3px rgba(52,58,64,1);
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    background-color: #343a40;
+    color: $primaryColor;
+
+    p {
+        margin: 0;
+    }
+}
